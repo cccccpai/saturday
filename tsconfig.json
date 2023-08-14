@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    },
+    /* JavaScript 支持 */
+    "allowJs": true, // 允许 JavaScript 文件成为您程序的一部分。使用 `checkJS` 选项从这些文件中获取错误 */
+    "checkJs": true, // 在类型检查的 JavaScript 文件中启用错误报告 */
+    /* 语言和环境 */
+    "target": "ESNext", // 设置 JavaScript 语言版本
+    "lib": ["DOM", "ESNext"],
+    "useDefineForClassFields": true, // 发出符合 ECMAScript 标准的类字段
+    "jsx": "preserve", // 指定生成什么 JSX 代码
+    /* 模块 */
+    "composite": true,
+    "module": "ESNext", // 指定生成什么模块代码
+    "resolveJsonModule": true, // 启用导入 .json 文件
+    "moduleResolution": "Node", // 指定 TypeScript 如何从给定的模块说明符中查找文件(为了向后兼容，不用管)
+    /* 类型检查 */
+    "strict": true, // 启用所有严格的类型检查选项
+    /* 互操作约束 */
+    "isolatedModules": true, // 确保每个文件都可以安全地转译，而不依赖于其他导入
+    "esModuleInterop": true, // 发出额外的 JavaScript 以简化对导入 CommonJS 模块的支持。这将启用 `allowSyntheticDefaultImports`(TRUE:当模块没有默认导出时允许 `import x from y` ) 以实现类型兼容性
+    "skipLibCheck": true, //  跳过所有 .d.ts 文件类型检查
+    "forceConsistentCasingInFileNames": true, // 不加，就会报错
+    "noUnusedLocals": true, // 不允许未被使用的变量
+    /* 启动 */
+    "noEmit": true, // 禁止编译器生成文件(只是运行检查)
+    "types": ["node", "jsdom", "vitest", "vite/client", "vite-plugin-pages/client", "vite-plugin-vue-layouts/client"]
+  },
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js", "src/**/__tests__/*", "cypress", "public", "uno.config.ts"]
+}
