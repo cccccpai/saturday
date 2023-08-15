@@ -16,6 +16,7 @@ import Unfonts from 'unplugin-fonts/vite';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import LinkAttributes from 'markdown-it-link-attributes';
 import Unocss from 'unocss/vite';
+import VueDevTools from 'vite-plugin-vue-devtools';
 
 const defaultClasses = 'prose prose-sm m-auto text-left';
 
@@ -116,6 +117,7 @@ export default (env: ConfigEnv) => {
     }),
     // https://github.com/antfu/unocss
     // see uno.config.ts for config
-    Unocss()
+    Unocss(),
+    VueDevTools()
   ];
 };

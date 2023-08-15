@@ -41,6 +41,7 @@
     "@types/node": "^18.16.19",
     "@unocss/eslint-config": "^0.53.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "vite-plugin-vue-devtools": "^0.5.1",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
